@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        android:animateLayoutChanges="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:animateLayoutChanges="true"
+            android:layout_height="fill_parent">
+            <fragment
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:src="@drawable/uber"
+                app:backgroundTint="#000"
+                app:fabSize="mini"
+
+
+                android:layout_gravity=""/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:visibility="gone"
+                android:src="@drawable/share"
+                app:backgroundTint="#e9e5dc"
+                app:fabSize="mini"
+
+
+                android:layout_gravity="bottom|end|left"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_container"
+            android:layout_gravity="start"
+            android:layout_width="240dp"
+            android:layout_height="fill_parent"/>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.iiitd.team10.nearyou.PreferenceSelection">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preference List"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:background="#CB212E"
+       android:fontFamily="@string/mr_media_route_chooser_title"
+        android:id="@+id/preference"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:id="@+id/btnLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F9F7F8"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/findSelected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#62BB6E"
+            android:textColor="#fff"
+            android:text="Save"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:id="@+id/resetSelected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#62BB6E"
+            android:text="Reset"
+            android:textColor="#fff"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/signout"
+            android:layout_centerVertical="true"
+            android:background="@drawable/signout"
+            android:textSize="15sp"
+
+            android:layout_alignRight="@+id/preference"
+            android:layout_alignEnd="@+id/preference"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+    <ListView android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#F9F7F8"
+        android:id="@+id/listView1"
+        android:layout_above="@id/btnLL"
+        android:layout_below="@+id/preference" />
+
+</RelativeLayout>
